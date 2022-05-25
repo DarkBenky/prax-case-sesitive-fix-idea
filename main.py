@@ -1,4 +1,7 @@
 
+from itertools import count
+
+
 def remove_duplicates_from_array(array):
 	array_ = []
 	n_ = ""
@@ -58,14 +61,16 @@ def add_diacritics_reversed(name):
 	name_ = ""
 	possibly = []
 	c = 0
+	count = 0
 	update = {"d":"ď" , "c": "č" , "s": "š" , "z": "ž" , "y":"ý" , "a": "ä" , "i" : "í" , "e" : "é" , "u" : "ú" , "a" : "á" , "o" :"ô" , "C": "Č", "S": "Š", "Z": "Ž", "Y": "Ý" , "A": "Á" , "I" : "Í" , "E" : "É" , "U" : "Ú" , "A" : "Ä" , "O" :"Ô" , "D" : "Ď"}
 	name = name[::-1]
 	while c < len(name):
 		for n in range(0,c):
 			try:
 				if name[n] != " ":
-					name_ += update[name[n]]
-					update.pop(name[n])
+					if count = 0:
+						name_ += update[name[n]]
+						update.pop(name[n])
 			except:
 				if name[n] != " ":
 					name_ += name[n]
