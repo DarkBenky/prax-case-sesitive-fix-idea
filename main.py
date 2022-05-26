@@ -1,6 +1,10 @@
 
 
 def not_case_sensitive(NAME):
+	def remove_single_letter(array):
+		for element in array:
+			if len(element) == 0 or len(element) == 1:
+				array.remove(element)
 	def remove_duplicates_from_array(array):
 		array_ = []
 		n_ = ""
@@ -130,11 +134,22 @@ def not_case_sensitive(NAME):
 	for n in result:
 		p =  add_diacritics_reversed(n)
 		p2 = add_diacritics(n)
-		for r in p:
-			result.append(r)
-		for r in p2:
-			result.append(r)
+		for z in p:
+			p_ = add_diacritics_reversed(z)
+			p__ = add_diacritics(z)
+			for x in p_:
+				result.append(x)
+			for x in p__:
+				result.append(x)		
+		for z in p2:
+			p_ = add_diacritics_reversed(z)
+			p__ = add_diacritics(z)
+			for x in p_:
+				result.append(x)
+			for x in p__:
+				result.append(x)
+
 	return remove_duplicates_from_array(result)
 
 
-print(not_case_sensitive("Jakub"))
+print(not_case_sensitive("Zelenskeho"))
